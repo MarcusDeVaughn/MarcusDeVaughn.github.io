@@ -1,0 +1,132 @@
+html {
+    cursor:crosshair !important;
+    font-size: 1.8vw;
+}
+
+
+.thebody {
+    max-height: 50%;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid rgba(0, 0, 0, 0.8) !important; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em; /* Adjust as needed */
+    animation: 
+      typing 4s steps(40, end),
+      blink-caret .75s step-end infinite;
+      font-family: Arial, Helvetica, sans-serif !important
+    }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color:  rgba(0, 0, 0, 0.8) !important; }
+  }
+
+.screenOneText {
+    text-decoration: none;
+    color: whitesmoke !important
+}
+
+
+.mobile_device_380px {
+    display: none;
+}
+.mobile_device_480px {
+    display: none;
+}
+
+.Middle {
+    margin-top:22%
+}
+
+
+.Icon {
+    display:inline-block;
+    overflow:hidden;
+    white-space:nowrap;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+  }
+  
+.Icon:first-of-type {    /* For increasing performance 
+                         ID/Class should've been used. 
+                         For a small demo 
+                         it's okaish for now */
+    animation: showup 7s infinite;
+    ;animation-fill-mode: forwards
+  }
+  
+  .Icon:last-of-type {
+    width:0px;
+    animation: reveal 7s infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+  }
+  
+.Icon:last-of-type span {
+    margin-left:-355px;
+    animation: slidein 7s infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards
+  }
+  
+  @keyframes showup {
+      0% {opacity:0;}
+      20% {opacity:1;}
+      80% {opacity:1;}
+      100% {opacity:1;}
+  }
+  
+  @keyframes slidein {
+      0% { margin-left:-800px; }
+      20% { margin-left:-800px; }
+      35% { margin-left:0px; }
+      100% { margin-left:0px; }
+  }
+  
+  @keyframes reveal {
+      0% {opacity:0;width:0px;}
+      20% {opacity:1;width:0px;}
+      30% {width:355px;}
+      80% {opacity:1;}
+      100% {opacity:1;width:355px;}
+  }
+
+  .custom-underline,
+  .custom-underline:hover,
+  .custom-underline:focus,
+  .custom-underline:active {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .custom-underline::after {
+    content: "";
+    position: absolute;
+  }
+
+  .box-e .custom-underline::after {
+    margin-top: 6%;
+    height: 3px;
+    width: 0%;
+    left: 5%;
+    background-color: rgba(255, 255, 255, .6);
+      transition: 0.8s ease all .9s;
+  }
+  
+  .box-e:hover .custom-underline::after {
+    width: 90%;
+      transition: 0.3s ease all;
+  }
